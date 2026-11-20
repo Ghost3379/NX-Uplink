@@ -1,4 +1,4 @@
-package com.nx.isd.uplink.ui.theme
+package com.nx.uplink.ui.theme
 
 import android.app.Activity
 import androidx.compose.material3.MaterialTheme
@@ -26,7 +26,7 @@ private val TacticalColorScheme = darkColorScheme(
 )
 
 @Composable
-fun ISDUplinkTheme(content: @Composable () -> Unit) {
+fun NXUplinkTheme(content: @Composable () -> Unit) {
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {

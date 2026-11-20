@@ -1,4 +1,4 @@
-package com.nx.isd.uplink.ui.components
+package com.nx.uplink.ui.components
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.clickable
@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.unit.dp
-import com.nx.isd.uplink.ui.theme.AmberBright
-import com.nx.isd.uplink.ui.theme.AmberGlow
+import com.nx.uplink.ui.theme.AmberBright
+import com.nx.uplink.ui.theme.AmberGlow
 
 /**
  * Tactical 3-line hamburger menu button for opening the hardware sidepanel.

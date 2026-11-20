@@ -1,4 +1,4 @@
-package com.nx.isd.uplink.ui.theme
+package com.nx.uplink.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

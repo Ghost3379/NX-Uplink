@@ -1,4 +1,4 @@
-package com.nx.isd.uplink.ui.theme
+package com.nx.uplink.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -6,7 +6,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.nx.isd.uplink.R
+import com.nx.uplink.R
 
 // Custom Cyberpunk / PCB Silkscreen Typography (Headlines & Badges)
 val CircuitForem = FontFamily(

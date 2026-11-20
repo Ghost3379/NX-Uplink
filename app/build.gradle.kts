@@ -4,16 +4,16 @@ plugins {
 }
 
 android {
-    namespace = "com.nx.isd.uplink"
+    namespace = "com.nx.uplink"
     compileSdk = 34
     buildToolsVersion = "36.0.0"
 
     defaultConfig {
-        applicationId = "com.nx.isd.uplink"
+        applicationId = "com.nx.uplink"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0.0-PROTOTYPE"
+        versionName = "0.1.0-ALPHA"
 
         vectorDrawables {
             useSupportLibrary = true

@@ -1,4 +1,4 @@
-package com.nx.isd.uplink.ui.home
+package com.nx.uplink.ui.home
 
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
@@ -19,10 +19,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nx.isd.uplink.ui.components.TacticalBackgroundGrid
-import com.nx.isd.uplink.ui.components.TacticalHamburgerButton
-import com.nx.isd.uplink.ui.submenu.SubMenuScreen
-import com.nx.isd.uplink.ui.theme.*
+import com.nx.uplink.ui.components.TacticalBackgroundGrid
+import com.nx.uplink.ui.components.TacticalHamburgerButton
+import com.nx.uplink.ui.submenu.SubMenuScreen
+import com.nx.uplink.ui.theme.*
 
 @Composable
 fun HomeScreen(

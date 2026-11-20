@@ -1,4 +1,4 @@
-package com.nx.isd.uplink.ui.home
+package com.nx.uplink.ui.home
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -21,7 +21,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nx.isd.uplink.ui.theme.*
+import com.nx.uplink.ui.theme.*
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt

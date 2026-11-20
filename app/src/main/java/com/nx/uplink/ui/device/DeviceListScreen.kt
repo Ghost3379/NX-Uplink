@@ -1,4 +1,4 @@
-package com.nx.isd.uplink.ui.device
+package com.nx.uplink.ui.device
 
 import android.widget.Toast
 import androidx.compose.foundation.Canvas
@@ -25,9 +25,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nx.isd.uplink.ui.components.TacticalBackgroundGrid
-import com.nx.isd.uplink.ui.components.TacticalHamburgerButton
-import com.nx.isd.uplink.ui.theme.*
+import com.nx.uplink.ui.components.TacticalBackgroundGrid
+import com.nx.uplink.ui.components.TacticalHamburgerButton
+import com.nx.uplink.ui.theme.*
 
 /**
  * Clean device selection start screen.

@@ -1,4 +1,4 @@
-package com.nx.isd.uplink
+package com.nx.uplink
 
 import android.os.Bundle
 import android.widget.Toast
@@ -10,12 +10,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import com.nx.isd.uplink.ui.components.TacticalDeviceDrawer
-import com.nx.isd.uplink.ui.device.DeviceListScreen
-import com.nx.isd.uplink.ui.home.HomeScreen
-import com.nx.isd.uplink.ui.splash.SplashScreen
-import com.nx.isd.uplink.ui.theme.ISDUplinkTheme
-import com.nx.isd.uplink.ui.theme.OledBlack
+import com.nx.uplink.ui.components.TacticalDeviceDrawer
+import com.nx.uplink.ui.device.DeviceListScreen
+import com.nx.uplink.ui.home.HomeScreen
+import com.nx.uplink.ui.splash.SplashScreen
+import com.nx.uplink.ui.theme.NXUplinkTheme
+import com.nx.uplink.ui.theme.OledBlack
 import kotlinx.coroutines.launch
 
 enum class AppDestination {
@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ISDUplinkTheme {
+            NXUplinkTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = OledBlack

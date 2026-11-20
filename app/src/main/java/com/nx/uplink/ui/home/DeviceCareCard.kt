@@ -1,4 +1,4 @@
-package com.nx.isd.uplink.ui.home
+package com.nx.uplink.ui.home
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -9,8 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nx.isd.uplink.ui.components.TacticalSmiley
-import com.nx.isd.uplink.ui.theme.*
+import com.nx.uplink.ui.components.TacticalSmiley
+import com.nx.uplink.ui.theme.*
 
 @Composable
 fun DeviceCareCard(

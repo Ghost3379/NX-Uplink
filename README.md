@@ -22,13 +22,14 @@ NX-Uplink is a high-performance native Android application (Kotlin + Jetpack Com
 ---
 
 ## Releases & Downloads
-Precompiled Android APKs are available directly in this repository:
-- **Latest Release**: [`NX-Uplink-v1.1.apk`](NX-Uplink-v1.1.apk) (15.7 MB)
+Precompiled Android APKs are available in the [`builds/`](builds/) directory:
+- **Build v0.1**: [`builds/NX-Uplink-v0.1.apk`](builds/NX-Uplink-v0.1.apk) (15.7 MB)
 
 ---
 
 ## Development Setup
 - **Framework**: Native Android (Kotlin 1.9.24, Jetpack Compose BOM 2024.06.00)
+- **Package**: `com.nx.uplink`
 - **Minimum SDK**: Android 8.0 (API 26)
 - **Target SDK**: Android 14 (API 34)
 - **Build Tools**: 36.0.0
@@ -42,3 +43,8 @@ Precompiled Android APKs are available directly in this repository:
 # Install directly to connected device over ADB
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
+
+---
+
+## License
+NX-Uplink is free and open-source software licensed under the **GNU General Public License v3.0 (GPLv3)**. See [LICENSE](LICENSE) for full details.

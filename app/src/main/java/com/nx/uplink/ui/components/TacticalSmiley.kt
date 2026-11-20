@@ -1,4 +1,4 @@
-package com.nx.isd.uplink.ui.components
+package com.nx.uplink.ui.components
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.size
@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.nx.isd.uplink.ui.theme.AmberBright
+import com.nx.uplink.ui.theme.AmberBright
 
 @Composable
 fun TacticalSmiley(

@@ -1,4 +1,4 @@
-package com.nx.isd.uplink.ui.submenu
+package com.nx.uplink.ui.submenu
 
 import android.widget.Toast
 import androidx.compose.foundation.border
@@ -19,8 +19,8 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nx.isd.uplink.ui.components.TacticalBackgroundGrid
-import com.nx.isd.uplink.ui.theme.*
+import com.nx.uplink.ui.components.TacticalBackgroundGrid
+import com.nx.uplink.ui.theme.*
 
 @Composable
 fun SubMenuScreen(

@@ -1,4 +1,4 @@
-package com.nx.isd.uplink.ui.components
+package com.nx.uplink.ui.components
 
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.Canvas
@@ -11,8 +11,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.unit.dp
-import com.nx.isd.uplink.ui.theme.AmberBright
-import com.nx.isd.uplink.ui.theme.AmberDim
+import com.nx.uplink.ui.theme.AmberBright
+import com.nx.uplink.ui.theme.AmberDim
 import kotlin.math.abs
 import kotlin.math.cos
 import kotlin.math.sin
