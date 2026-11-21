@@ -175,11 +175,7 @@ fun HomeScreen(
             deviceId = "NX-ISD-0042",
             macAddress = "SIM:E4:65:B8:21:40",
             hardwareRev = "v1.4 (Production)",
-            onDismiss = { showQuickView = false },
-            onSwitchDevice = {
-                showQuickView = false
-                onNavigateFleet()
-            }
+            onDismiss = { showQuickView = false }
         )
     }
 }

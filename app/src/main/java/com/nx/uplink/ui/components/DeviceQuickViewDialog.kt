@@ -37,8 +37,7 @@ fun DeviceQuickViewDialog(
     deviceId: String = "NX-ISD-0042",
     macAddress: String = "SIM:E4:65:B8:21:40",
     hardwareRev: String = "v1.4 (Production)",
-    onDismiss: () -> Unit,
-    onSwitchDevice: () -> Unit
+    onDismiss: () -> Unit
 ) {
     Dialog(onDismissRequest = onDismiss) {
         Box(
@@ -209,52 +208,26 @@ fun DeviceQuickViewDialog(
                     QuickViewInfoRow(label = "Storage", value = "MicroSD (4-bit SDMMC)")
                 }
 
-                // Action Buttons: Switch Device & Close
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                // Close Button
+                Button(
+                    onClick = onDismiss,
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = TacticalSurface,
+                        contentColor = TextPrimary
+                    ),
+                    shape = RoundedCornerShape(8.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(44.dp)
+                        .border(1.dp, TacticalBorder, RoundedCornerShape(8.dp))
                 ) {
-                    // Switch Device
-                    Button(
-                        onClick = onSwitchDevice,
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = TacticalSurface,
-                            contentColor = AmberBright
-                        ),
-                        shape = RoundedCornerShape(8.dp),
-                        modifier = Modifier
-                            .weight(1f)
-                            .height(44.dp)
-                            .border(1.dp, AmberMid, RoundedCornerShape(8.dp))
-                    ) {
-                        Text(
-                            text = "Switch Device",
-                            fontFamily = TypewriterFont,
-                            fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold
-                        )
-                    }
-
-                    // Close
-                    Button(
-                        onClick = onDismiss,
-                        colors = ButtonDefaults.buttonColors(
-                            containerColor = TacticalSurfaceElevated,
-                            contentColor = TextPrimary
-                        ),
-                        shape = RoundedCornerShape(8.dp),
-                        modifier = Modifier
-                            .weight(1f)
-                            .height(44.dp)
-                            .border(1.dp, TacticalBorder, RoundedCornerShape(8.dp))
-                    ) {
-                        Text(
-                            text = "Dismiss",
-                            fontFamily = TypewriterFont,
-                            fontSize = 12.sp,
-                            color = TextSecondary
-                        )
-                    }
+                    Text(
+                        text = "Close",
+                        fontFamily = TypewriterFont,
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Medium,
+                        color = TextPrimary
+                    )
                 }
             }
         }
