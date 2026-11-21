@@ -9,6 +9,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
@@ -19,6 +20,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.nx.uplink.ui.components.DeviceQuickViewDialog
 import com.nx.uplink.ui.components.TacticalBackgroundGrid
 import com.nx.uplink.ui.components.TacticalHamburgerButton
 import com.nx.uplink.ui.submenu.SubMenuScreen
@@ -33,6 +35,7 @@ fun HomeScreen(
     var activeSubMenu by remember { mutableStateOf<String?>(null) }
     var statusTitle by remember { mutableStateOf("Good") }
     var statusSubtitle by remember { mutableStateOf("No battery or sensor issues") }
+    var showQuickView by remember { mutableStateOf(false) }
 
     // Intercept physical/gesture back button:
     // If in sub-menu -> exit to hub
@@ -97,21 +100,39 @@ fun HomeScreen(
                                 letterSpacing = 2.sp
                             )
 
-                            // Device switcher button
+                            // Device quick-view pill button at top right
                             Box(
                                 modifier = Modifier
                                     .background(TacticalSurfaceElevated, shape = RoundedCornerShape(8.dp))
-                                    .border(1.dp, TacticalBorder, shape = RoundedCornerShape(8.dp))
-                                    .clickable { onNavigateFleet() }
-                                    .padding(horizontal = 12.dp, vertical = 6.dp)
+                                    .border(1.dp, AmberMid.copy(alpha = 0.6f), shape = RoundedCornerShape(8.dp))
+                                    .clickable { showQuickView = true }
+                                    .padding(horizontal = 10.dp, vertical = 6.dp)
                             ) {
-                                Text(
-                                    text = "Devices",
-                                    fontFamily = TypewriterFont,
-                                    fontSize = 12.sp,
-                                    fontWeight = FontWeight.Medium,
-                                    color = AmberBright
-                                )
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(6.dp)
+                                ) {
+                                    Box(
+                                        modifier = Modifier
+                                            .size(7.dp)
+                                            .background(NominalGreen, CircleShape)
+                                    )
+                                    Text(
+                                        text = "94%",
+                                        fontFamily = TypewriterFont,
+                                        fontSize = 12.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = TextPrimary
+                                    )
+                                    Text(
+                                        text = "INFO",
+                                        fontFamily = CircuitForem,
+                                        fontSize = 10.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = AmberBright,
+                                        letterSpacing = 0.5.sp
+                                    )
+                                }
                             }
                         }
 
@@ -142,5 +163,23 @@ fun HomeScreen(
                 }
             }
         }
+    }
+
+    if (showQuickView) {
+        DeviceQuickViewDialog(
+            deviceName = "NX-ISD",
+            deviceType = "Tactical Biometric Watch",
+            batteryPercent = 94,
+            batteryVoltage = "4.12 V",
+            softwareVersion = "ISD-Core v1.4.2",
+            deviceId = "NX-ISD-0042",
+            macAddress = "SIM:E4:65:B8:21:40",
+            hardwareRev = "v1.4 (Production)",
+            onDismiss = { showQuickView = false },
+            onSwitchDevice = {
+                showQuickView = false
+                onNavigateFleet()
+            }
+        )
     }
 }
